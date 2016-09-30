@@ -1,4 +1,4 @@
-class Skating
+class Skater
 
 	attr_reader :name, :points, :pos
 
@@ -13,7 +13,7 @@ class Skating
  	@hit = args.fetch(:hit, 0)
  	@blk = args.fetch(:blk, 0)
  	@points = point_maker
- 	@pos = args.fecth(:pos, "")
+ 	@pos = args.fetch(:pos, "")
  end
 
  def point_maker
