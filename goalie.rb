@@ -13,6 +13,7 @@ class Goalie
  end
 
  def point_maker
- 	@points = (@wins * 5) + (@ga * -1) + (@sv * .1) + (@so * 3) + (@otl + 2)
+ 	@points = (@wins * 5) + (@ga * -1) + (@sv * 0.1) + (@so * 3) + (@otl + 2)
+ 	@points.round
  end
 end
