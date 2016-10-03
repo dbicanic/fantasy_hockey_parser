@@ -1,7 +1,8 @@
-require "ruby"
 require "roo-xls"
+require "csv"
 require_relative "goalie"
 require_relative "skating"
+
 
 goalies = []
 skaters = []
@@ -81,6 +82,13 @@ skater_header[header] = i
 	end
 end
 
-p skaters[0]
-
+CSV.open("fantasy_hockey.csv", "wb") do |row|
+	row << ["Points", "Name", "Position"]
+	skaters.each do |skater|
+		row << [skater.points, skater.name, skater.pos]
+	end
+	goalies.each do |goalie|
+		row << [goalie.points, goalie.name, goalie.pos]
+	end
+end
 
